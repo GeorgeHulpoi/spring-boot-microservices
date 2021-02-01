@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="api/users">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:signin-request>
+            <us:name>armyw0w</us:name>
+            <us:password>123456</us:password>
+        </us:signin-request>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,73 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="api/auth"
+           targetNamespace="api/auth" elementFormDefault="qualified">
+
+    <xs:element name="signin-request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="signin-response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cookie" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="logout-request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cookie" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="logout-response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ok" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="user-request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cookie" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="user-response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="role" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="password" type="xs:string"/>
+            <xs:element name="role" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="key">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="token" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
