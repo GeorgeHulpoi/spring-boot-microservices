@@ -1,10 +1,10 @@
-package ac.pos.bookservice;
+package ac.pos.exposedrest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BookserviceApplicationTests {
+class ExposedRestApplicationTests {
 
 	@Test
 	void contextLoads() {
